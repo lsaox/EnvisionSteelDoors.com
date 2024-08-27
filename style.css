@@ -1,0 +1,511 @@
+
+
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.877); /* Adjust opacity as needed */
+    z-index: 5; /* Ensure it's behind text but in front of the background image */
+}
+.bottom-left-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 60px;
+    font-family: 'Playfair Display', sans-serif;
+    z-index: 10;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7); /* Add this line */
+}
+/* Alternating Section Styling */
+.alternating-section {
+    padding: 60px 0;
+    background-color: #f8f9fa; /* Light background color */
+}
+
+.alternating-section .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.alternating-section .text-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.alternating-section .text-content p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.alternating-section .image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alternating-section .image-content img {
+    width: 100%;
+    max-width: 300px; /* Adjust the max-width to your preference */
+    height: auto;
+    border-radius: 8px; /* Optional: Adds rounded corners to images */
+    object-fit: cover; /* Ensures the image covers the square area without distortion */
+}
+
+/* Ensures text and image are side by side */
+.alternating-section .row {
+    margin-bottom: 30px;
+}
+
+/* Reverse the order for the second row */
+.alternating-section .flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .alternating-section .row {
+        flex-direction: column;
+    }
+}
+/* Brand Carousel Styling */
+.brand-carousel {
+    padding: 50px 0;
+    background-color: #f8f9fa; /* Light background color */
+}
+
+.brand-carousel h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+}
+
+.carousel-inner {
+    padding: 0 50px;
+}
+
+.carousel-item img {
+    max-height: 200px; /* Adjust height as needed */
+    object-fit: contain; /* Ensures logos retain their aspect ratio */
+}
+
+
+/* Optional: Style carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background for visibility */
+    border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-item img {
+        max-height: 80px; /* Adjust height for smaller screens */
+    }
+}
+/* Style for image container */
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Style for images */
+.image-container img {
+    width: 100%; /* Adjust based on your layout */
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+/* Overlay styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* White overlay with 50% opacity */
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+/* Overlay text styling */
+.overlay-text {
+    font-size: 24px;
+    color: #000; /* Text color */
+    font-family: 'Playfair Display', serif;
+}
+
+/* Hover effect */
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+/* Optional: Ensure overlay text is centered properly */
+.overlay-text {
+    text-align: center;
+}
+.ceo-message-section {
+    padding: 40px 0;
+    background-color: #f8f9fa; /* Light background color */
+}
+
+.ceo-message-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ceo-message-section .text-content {
+    padding-right: 15px; /* Add space between text and video */
+}
+
+.ceo-message-section .video-content iframe {
+    width: 100%;
+    height: 315px; /* Adjust height as needed */
+}
+
+.contact-info {
+    margin-top: 20px; /* Space above the contact info */
+}
+
+.contact-info .btn-modern {
+    display: inline-block;
+    font-size: 16px;
+    padding: 12px 25px;
+    background-color: #333; /* Dark background for the button */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-info .btn-modern:hover {
+    background-color: #fff; /* White background on hover */
+    color: #333; /* Dark text color on hover */
+    border-color: #333; /* Dark border color on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+@media (max-width: 768px) {
+    .ceo-message-section .row {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+    .ceo-message-section .video-content iframe {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
+/* Style for the Design Process Section Image */
+.design-process-img {
+    max-width:60%; /* Adjust this percentage to make the image smaller or larger */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Ensure the image is treated as a block element for centering */
+}
+/* Design Process Section */
+.design-process-section {
+    padding: 40px 0; /* Adjust padding as needed */
+}
+
+/* Text Content Styling */
+.text-content {
+    text-align: left; /* Align text to the left */
+}
+
+/* Image Styling */
+.image-content {
+    text-align: right; /* Align image to the right */
+}
+
+.design-process-section {
+    padding: 40px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-content {
+    margin-bottom: 20px; /* Add margin to space out text from image */
+}
+
+.design-process-img {
+    max-width: 116%; /* Adjust to make the image fit well */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Ensure the image is treated as a block element for centering */
+}
+
+@media (max-width: 768px) {
+    .design-process-section {
+        padding: 20px 0;
+    }
+}
+.design-process-section {
+    padding: 60px 0; /* Add extra padding to accommodate decorative elements */
+    position: relative;
+    overflow: hidden; /* Ensure decorative elements don't overflow the container */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-content {
+    margin-bottom: 20px; /* Add margin to space out text from image */
+}
+
+.design-process-img {
+    max-width: 100%; /* Adjust to make the image fit well */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Ensure the image is treated as a block element for centering */
+}
+
+.decorative-line {
+    height: 4px; /* Thickness of the decorative line */
+    background: #3333332d; /* Color of the decorative line */
+    margin: 20px 0; /* Space above and below the line */
+}
+
+.bottom-line {
+    background: linear-gradient(to right, transparent, #97979746); /* Gradient effect for the bottom line */
+}
+
+.header-line {
+    border: none;
+    height: 2px; /* Thickness of the line */
+    background: rgba(51, 51, 51, 0.171); /* Color of the line with 70% opacity */
+    width: 50%; /* Adjust the width to your preference */
+    margin: 20px auto; /* Center the line and add space above and below */
+}
+
+.design-process-section {
+    padding: 60px 0; /* Padding for the section */
+    position: relative;
+    overflow: hidden; /* Ensure decorative elements fit within the container */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-content {
+    margin-bottom: 20px; /* Space between text and image */
+}
+
+.design-process-img {
+    max-width: 100%; /* Fit image to container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center image horizontally */
+    display: block; /* Block-level element for centering */
+}
+
+.decorative-line {
+    height: 4px; /* Thickness of the decorative line */
+    background: rgba(241, 241, 241, 0); /* Color of the decorative line with 70% opacity */
+    margin: 20px 0; /* Space above and below the line */
+}
+
+.bottom-line {
+    background: linear-gradient(to right, transparent, rgba(51, 51, 51, 0.185)); /* Gradient effect for bottom line with opacity */
+}
+
+@media (max-width: 768px) {
+    .design-process-section {
+        padding: 40px 0;
+    }
+}
+/* Styling for Header Line */
+.header-line {
+    border: 0;
+    border-top: 2px solid #333;
+    width: 50px;
+    margin: 20px auto;
+}
+
+/* Styling for the Image Content */
+.image-content {
+    position: relative; /* Required for positioning the button */
+}
+
+.design-process-img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Styling for the Gallery Button */
+.btn-gallery {
+    display: inline-block;
+    background-color: #3333336c;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-gallery:hover {
+    background-color: #ffffff;
+    transform: scale(1.05); /* Slightly increase the size on hover */
+}
+
+/* Hover Effect for Image */
+.image-content:hover .design-process-img {
+    transform: translateY(-10px); /* Move the image up by 10px */
+}
+
+/* Image Tiles Section Styling */
+.image-tiles-section {
+    padding: 60px 0; /* Adjust padding as needed */
+}
+
+.tile {
+    position: relative;
+    overflow: hidden;
+    height: 300px; /* Adjust the height of the tiles */
+}
+
+.tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the tile */
+}
+
+.tile-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    color: #fff;
+    text-align: center;
+
+    visibility: hidden; /* Hide caption by default */
+    opacity: 0; /* Hide caption by default */
+    transition: opacity 0.3s; /* Smooth transition */
+}
+
+.tile:hover .tile-caption {
+    visibility: visible;
+    opacity: 1; /* Show caption on hover */
+}
+.brand-carousel {
+    background: url('path/to/your/image.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: #fffffffd; /* You can keep or remove this depending on your design needs */
+    padding: 50px 0; /* Adjust padding as needed */
+}
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 30px 0;
+    font-size: 14px;
+}
+
+.footer h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin-bottom: 20px;
+}
+
+.footer .contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .contact-list li {
+    margin-bottom: 10px;
+}
+
+.footer .contact-list i {
+    margin-right: 10px;
+}
+
+.footer .social-media {
+    margin-top: 20px;
+}
+
+.footer .social-icon {
+    color: #fff;
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.footer .social-icon:hover {
+    color: #ddd;
+}
+
+.footer .social-icon i {
+    margin-right: 5px;
+}
+
+.footer .text-center {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.footer .text-center a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer .text-center a:hover {
+    text-decoration: none;
+}
+.social-icons i {
+    font-size: 24px; /* Adjust size as needed */
+    color: #000; /* Change color as needed */
+    transition: color 0.3s;
+}
+
+.social-icons a:hover i {
+    color: #007bff; /* Change hover color as needed */
+}/* Ensure the parent container takes full width and centers content */
+.social-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    gap: 1rem; /* Adjust gap between header and icons */
+}
+
+.social-header h2 {
+    margin: 0; /* Remove default margin */
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline from links */
+}
+
+.social-icons i {
+    font-size: 24px; /* Adjust size as needed */
+    color: #000; /* Icon color */
+    transition: color 0.3s;
+}
+
+.social-icons a:hover i {
+    color: #007bff; /* Change hover color */
+}
