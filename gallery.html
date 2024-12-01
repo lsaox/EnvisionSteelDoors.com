@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SteelEntry.com</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Oswald:wght@500&family=Playball&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- Custom CSS -->
+
+    <style>
+   /* Navbar styling */
+   
+    
+ 
+    
+        .bottom-left-text {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #fff;
+            font-size: 65px;
+            font-family: 'Playfair Display', sans-serif;
+            z-index: 10;
+        }
+    
+        /* Centered Button Styling */
+        .centered-button-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            text-align: center;
+        }
+    
+        .centered-button-container .learn-more-button {
+            color: #fff;
+            font-size: 18px;
+            padding: 15px 30px;
+            border: 2px solid #fff;
+            background-color: transparent;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+            font-family: 'Playfair Display';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .centered-button-container .learn-more-button:hover {
+            background-color: #ffffffe3;
+            color: #000;
+        }
+    
+/* New section styling */
+.second-section {
+    position: relative;
+    background-image: url('assets/Doorspic.jpg');
+    background-size: cover; /* Cover the entire section */
+    background-position: center top; /* Position the image at the top center */
+    height: 500px; /* Set the desired height for the section */
+    width: 50%; /* Full width of the viewport */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden; /* Hide any overflowing parts of the background image */
+}
+
+/* Overlay for better text visibility */
+.second-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1; /* Place overlay below text */
+}
+
+/* Text content styling */
+.second-section .text-content {
+    position: relative; /* Relative position to be above the overlay */
+    left: 30px; /* Adjust left positioning as needed */
+    top: 10%; /* Move text up from the center */
+    transform: translateY(-50%); /* Center the content vertically if needed */
+    max-width: 600px;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    z-index: 2; /* Ensure text is above the overlay */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0); /* Add shadow for better readability */
+}
+
+.second-section .text-content h1 {
+    margin: 0;
+    font-size: 3rem; /* Adjust font size as needed */
+    line-height: 2;
+    font-weight: 800; /* Ensure text is bold for better visibility */
+}
+
+
+.position-absolute {
+    position: absolute;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.right-0 {
+    right: 0;
+}
+
+/* Hero Section with Background Image and 50% Black Overlay */
+.hero-section {
+    position: relative;
+    background-image: url('assets/picsaaaa.svg'); /* Your background image path */
+    background-size: cover;
+    background-position: center;
+    height: 550px; /* Adjust the height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Black Overlay with 50% opacity */
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% black opacity overlay */
+    z-index: 1; /* Ensure overlay is above the background but below the text */
+}
+
+/* Text Content */
+.hero-section .container {
+    position: relative;
+    z-index: 2; /* Text should be above the overlay */
+    text-align: center;
+}
+
+/* Styling for Text */
+.hero-section h1 {
+    font-size: 3rem; /* Larger font size */
+}
+
+.hero-section p {
+    font-size: 1.25rem; /* Medium-sized paragraph text */
+}
+.navbar {
+            z-index: 1050; /* Ensure the navbar is always above the hero section */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 5px 0;
+            background-color: rgba(0, 0, 0, 0.041);
+       
+        }
+
+        .navbar .navbar-brand img {
+            height: 110px; /* Logo size */
+        }
+
+     
+
+        .navbar-nav .nav-link:hover {
+            color: #ddd !important; /* Lighter hover effect */
+        }
+
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black ">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/Envision (1).svg" alt="Envision Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="residential.html">Residential</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="commercial.html">Commercial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="materials.html">Materials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Our Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="overlay"></div> <!-- Black overlay with 50% opacity -->
+    <div class="container">
+        <h1 class="display-4">Our Gallery</h1>
+    
+    </div>
+</section>
+<script>if(!window.picflow){window.picflow=!0;var s=document.createElement("script");s.src="https://picflow.com/embed/main.js";s.type='module';s.defer=true;document.head.appendChild(s);}</script><picflow-gallery id="gal_ZPaSyIfiP7WVPaSR" lightbox="#000000E6"></picflow-gallery>
+
+<div class="social-header mb-4">
+    <h2 class="mb-0">Stay Connected</h2>
+    <div class="social-icons">
+        <a href="https://https://www.facebook.com/steelentry" target="_blank" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/steelentry/?hl=es" target="_blank" class="mx-2"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.pinterest.com/SteelEntryWorldwide/" target="_blank" class="mx-2"><i class="fab fa-pinterest-p"></i></a>
+        <a href="https://www.tiktok.com" target="_blank" class="mx-2"><i class="fab fa-tiktok"></i></a>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+      <!-- Contact Information Section -->
+      <div class="contact-info">
+        <h3>Contact Us</h3>
+        <div>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:info@envision.com">info@envision.com</a>
+        </div>
+        <div>
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+123456789">+1 (234) 567-89</a>
+        </div>
+        <div>
+          <i class="fas fa-map-marker-alt"></i>
+          <span>1234 Design St, City, State, 56789</span>
+        </div>
+      </div>
+  
+      <!-- Quick Links Section -->
+      <div class="quick-links" style="text-align: right;">
+        <h3>Quick Links</h3>
+        <div>
+          <a href="#about"><i class="fas fa-info-circle"></i> About Us</a>
+          <a href="#services"><i class="fas fa-cogs"></i> Our Services</a>
+          <a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a>
+          <a href="#contact"><i class="fas fa-phone-alt"></i> Contact</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2024 Envision. All rights reserved.</p>
+    </div>
+  </footer>
+
+    <!-- Bootstrap JavaScript and dependencies -->
+    <script src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+    </script>
+    <script>   // Optional: Add a shadow effect to the navbar when scrolling
+        window.addEventListener('scroll', function() {
+            var navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        // JavaScript to handle dropdown image display
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('mouseover', function() {
+                const imageUrl = this.getAttribute('data-image');
+                document.getElementById('dropdownImage').src = imageUrl;
+            });
+        });
+        window.addEventListener('scroll', function() {
+        var navbar = document.querySelector('.navbar');
+        if (window.scrollY > 65) {
+            navbar.classList.add('shrunk');
+        } else {
+            navbar.classList.remove('shrunk');
+        }
+    });
+    </script>
+</body>
+</html>

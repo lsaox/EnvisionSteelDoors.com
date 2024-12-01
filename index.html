@@ -18,90 +18,9 @@
 
     <style>
    /* Navbar styling */
-   .navbar {
-        font-family: 'Playfair Display', serif;
-        background-color: rgba(0, 0, 0, 0.733) !important; /* Original background color */
-        position: absolute;
-        width: 100%;
-        z-index: 1000;
-        backdrop-filter: blur(8px);
-        box-shadow: 0 4px 70px rgba(4, 1, 36, 0.897); /* Shadow for 3D effect */
-    }
-    .navbar .navbar-brand img {
-        margin-right: 10px;
-    }
-    .navbar .navbar-nav {
-        margin: 0 auto;
-    }
-    .navbar .navbar-nav .nav-item {
-        text-align: center;
-        position: relative;
-        display: inline-block; /* Ensure items are inline-block for correct layout */
-    }
-    .navbar .navbar-nav .nav-link {
-        position: relative;
-        color: #ffffff; /* Original color */
-        transition: color 0.3s ease-in-out;
-        display: flex; /* Use flexbox to align items */
-        align-items: center; /* Center items vertically */
-        padding: 0 10px; /* Space around text */
-    }
-    .navbar .navbar-nav .nav-link:hover {
-        color: hsl(0, 0%, 100%); /* Change color on hover */
-    }
-
-    /* Dropdown Styling */
-    .navbar .nav-item {
-        position: relative;
-    }
-    .navbar .nav-item .dropdown-menu {
-        visibility: hidden;
-        opacity: 0;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1000;
-        background-color: #ffffff; /* Original color */
-        border: 1px solid #000000;
-        border-radius: 0.25rem;
-        padding: 0.5rem 0;
-        transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
-    }
-    .navbar .nav-item:hover .dropdown-menu,
-    .dropdown-menu:hover {
-        visibility: visible;
-        opacity: 1;
-    }
-    .dropdown-menu .dropdown-item {
-        color: #000000; /* Original color */
-        padding: 0.5rem 1rem;
-        transition: background-color 0.2s ease-in-out;
-    }
-    .dropdown-menu .dropdown-item:hover {
-        background-color: #8b84df80;
-    }
-
-    /* Additional padding to prevent gaps */
-    .navbar .nav-item:hover .dropdown-menu {
-        top: calc(100% + -4px); /* Adjust if needed */
-    }
-        /* Ensures the dropdown stays visible while hovering */
-        .navbar .nav-item:hover .dropdown-menu,
-        .dropdown-menu:hover {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
+   
+    
  
-        /* Background Image */
-        .background-image {
-            height: 850px;
-            background-image: url('assets/Untitled design.svg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            z-index: 0;
-        }
     
         .bottom-left-text {
             position: absolute;
@@ -188,25 +107,7 @@
     font-weight: 800; /* Ensure text is bold for better visibility */
 }
 
-@media (max-width: 768px) {
-    .second-section .text-content h1 {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
-    }
-    .navbar-nav .nav-link {
-    color: white; /* Ensure text color is white */
-}
 
-.navbar-nav .nav-link i {
-    font-size: 1.25rem; /* Adjust icon size as needed */
-    color: white; /* Icon color */
-    margin-left: 15px; /* Space between icons */
-}
-
-.navbar-nav .nav-link:hover i {
-    color: #ffffff; /* Change hover color as needed */
-}
-
-}
 .position-absolute {
     position: absolute;
 }
@@ -219,92 +120,111 @@
     right: 0;
 }
 
-.p-3 {
-    padding: 1rem;
+/* Hero Section with Background Image and 50% Black Overlay */
+.hero-section {
+    position: relative;
+    background-image: url('assets/picsaaaa.svg'); /* Your background image path */
+    background-size: cover;
+    background-position: center;
+    height: 550px; /* Adjust the height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
-.nav-link i {
-    font-size: 1.2rem; /* Adjust icon size as needed */
+/* Black Overlay with 50% opacity */
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% black opacity overlay */
+    z-index: 1; /* Ensure overlay is above the background but below the text */
 }
+
+/* Text Content */
+.hero-section .container {
+    position: relative;
+    z-index: 2; /* Text should be above the overlay */
+    text-align: center;
+}
+
+/* Styling for Text */
+.hero-section h1 {
+    font-size: 3rem; /* Larger font size */
+}
+
+.hero-section p {
+    font-size: 1.25rem; /* Medium-sized paragraph text */
+}
+.navbar {
+            z-index: 1050; /* Ensure the navbar is always above the hero section */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 5px 0;
+            background-color: rgba(0, 0, 0, 0.041);
+       
+        }
+
+        .navbar .navbar-brand img {
+            height: 110px; /* Logo size */
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important; /* White text color */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ddd !important; /* Lighter hover effect */
+        }
+
     </style>
 </head>
 <body>
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="padding-top: 25px; padding-left: 75px;">
-    <a class="navbar-brand" href="#">
-        <img src="assets/SE-logo-300 (1).png" width="180" height="75" class="d-inline-block align-top" alt="SteelEntry.com Logo">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="d-flex justify-content-end position-absolute top-0 right-0 p-3">
-            <a class="nav-link" href="https://www.facebook.com/steelentry/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a class="nav-link" href="https://www.instagram.com/steelentry/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a class="nav-link" href="https://www.pinterest.com/SteelEntryWorldwide/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
-            <a class="nav-link" href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black ">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/Envision (1).svg" alt="Envision Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="residential.html">Residential</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="commercial.html">Commercial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="materials.html">Materials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Our Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <ul class="navbar-nav mx-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="residentialDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Residential</a>
-                <div class="dropdown-menu" aria-labelledby="residentialDropdown">
-                    <a class="dropdown-item" href="#">Steel Products</a>
-                    <a class="dropdown-item" href="#">Iron Products</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="commercialDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Commercial</a>
-                <div class="dropdown-menu" aria-labelledby="commercialDropdown">
-                    <a class="dropdown-item" href="#">Thermally Broken</a>
-                    <a class="dropdown-item" href="#">Hot-Rolled Steel</a>
-                    <a class="dropdown-item" href="#">Cold-Rolled Steel</a>
-                    <a class="dropdown-item" href="#">Stainless Steel</a>
-                    <a class="dropdown-item" href="#">Color-Coated Steel</a>
-                    <a class="dropdown-item" href="#">Galvanized Steel</a>
-                    <a class="dropdown-item" href="#">Architectural Bronze</a>
-                    <a class="dropdown-item" href="#">Wrought Iron</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Materials</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Product Gallery</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Request a Quote</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+    </nav>
+    
 
-<div class="background-image">
-    <!-- Content on top of the image -->
+<!-- Hero Section -->
+<section class="hero-section" data-aos-duration="1400">
+    <div class="overlay"></div> <!-- Black overlay with 50% opacity -->
     <div class="container">
-        <div class="row">
-            <!-- Content here -->
-        </div>
+        <h1 class="display-4">What do you Envision?</h1>
+        <p class="lead">Premium Windows and Doors</p>
     </div>
+</section>
 
-    <div class="bottom-left-text"  style="padding-bottom: 260px; padding-top: 20px; font-size: 60px; padding-left: 50px; font-family: 'Playfair Display';">
-        <div class="premium-text">Premium Windows</div>
-        <div class="windows-doors-text" style="margin-top: -35px;">and Doors</div>
-    </div>
-
-    <!-- Centered Button -->
-    <div class="centered-button-container" style="padding-top: 505px;">
-        <a href="#" class="learn-more-button">Learn More</a>
-    </div>
-</div>
-<!-- Alternating Image and Text Section -->
 <section class="alternating-section">
     <div class="container">
         <!-- First Row: Image on the Right, Text on the Left -->
@@ -321,22 +241,22 @@
         <div class="row flex-row-reverse" data-aos="fade-up" data-aos-duration="1400">
             <div class="col-lg-6 text-content">
                 <h2>100% Financing</h2>
-                <p> At Steel Entry, we provide 100% financing to bring your premium steel and iron projects to life effortlessly.</p>
+                <p> At Envision, we provide 100% financing to bring your premium steel and iron projects to life effortlessly.</p>
             </div>
             <div class="col-lg-6 image-content">
                 <img src="assets/steel door.jpg" alt="Innovative Solutions">
             </div>
         </div>
     </div>
-    
 </section>
+
 <section class="ceo-message-section" data-aos="fade-up" data-aos-duration="1400">
     <div class="container">
         <div class="row">
             <!-- Text Content on the Left -->
             <div class="col-lg-6 text-content">
                 <h2>Message from Our Owner and CEO</h2>
-                <p>Steel Entry delivers premium, custom-designed steel windows, doors, and iron stairs, tailored precisely to our clients' specifications. With over a decade of experience, we craft unique, artistic solutions for both residential and commercial projects. Our commitment is to enhance both quality and curb appeal with every project. We aim to assist contractors and homeowners in making a bold statement that transcends conventional wood and fiberglass doors. Explore our steel doors and windows, view our gallery, and reach out to discover how we can elevate your next project.</p>
+                <p>Envision delivers premium, custom-designed steel windows, doors, and iron stairs, tailored precisely to our clients' specifications. With over a decade of experience, we craft unique, artistic solutions for both residential and commercial projects. Our commitment is to enhance both quality and curb appeal with every project. We aim to assist contractors and homeowners in making a bold statement that transcends conventional wood and fiberglass doors. Explore our steel doors and windows, view our gallery, and reach out to discover how we can elevate your next project.</p>
                 
                 <!-- Contact Button and Phone Number -->
                 <div class="contact-info">
@@ -407,10 +327,10 @@
             <!-- Image Content -->
             <div class="col-lg-6 image-content text-center" data-aos="fade-up" data-aos-duration="1600">
                 <!-- Gallery Button -->
-                <a href="gallery.html" class="btn btn-gallery">Our Gallery</a>
+                <a href="" class="btn btn-gallery">Our Work</a>
                 
                 <!-- Image -->
-                <img src="assets/designprocess2.png" alt="Design Process" class="design-process-img">
+                <img src="assets/WINTER READY! Save money!.svg" alt="Design Process" class="design-process-img">
             </div>
         </div>
         
@@ -419,8 +339,39 @@
     </div>
 </section>
 
-
-<!-- Stay Connected Header with Social Media Icons -->
+<!-- Meet the Team Carousel Section -->
+<!-- Meet the Team Carousel Section -->
+<section class="team-carousel-section" data-aos="fade-up" data-aos-duration="2100" style="background-color: #f8f9fa;">
+    <div class="container">
+        <h2 class="text-center mb-4">Meet the Team</h2>
+        <div id="teamCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <div class="carousel-inner">
+                <!-- Team Member 1 -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center gx-5"> <!-- Increased horizontal gutter to gx-5 -->
+                        <div class="col-md-3 text-center">
+                            <img src="assets/meldiana.svg" class="d-block w-90" style="height: 500px; object-fit: cover;" alt="Team Member 1">
+                            <h5 class="mt-3">Mel & Diana Soto</h5>
+                            <p>CEO & Founders</p>
+                        </div>
+                        <!-- Team Member 2 -->
+                        <div class="col-md-3 text-center">
+                            <img src="assets/team2.jpg" class="d-block w-90" style="height: 400px; object-fit: cover;" alt="Team Member 2">
+                            <h5 class="mt-3">Alexander Soto</h5>
+                            <p>National Sales Account Manager</p>
+                        </div>
+                        <!-- Team Member 3 -->
+                        <div class="col-md-3 text-center">
+                            <img src="assets/gregkue.jpg" class="d-block w-90" style="height: 400px; object-fit: cover;" alt="Team Member 3">
+                            <h5 class="mt-3">Greg Kuebler</h5>
+                            <p>Director of Construction & Development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="social-header mb-4">
     <h2 class="mb-0">Stay Connected</h2>
     <div class="social-icons">
@@ -430,49 +381,40 @@
         <a href="https://www.tiktok.com" target="_blank" class="mx-2"><i class="fab fa-tiktok"></i></a>
     </div>
 </div>
-
-
-
-<!-- Footer Section -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <!-- About Us Section -->
-            <div class="col-md-4">
-                <h5>About Us</h5>
-                <p>We specialize in high-quality steel entry solutions for residential and commercial properties. Our commitment to excellence ensures that every product meets the highest standards of durability and design.</p>
-            </div>
-
-            <!-- Contact Information Section -->
-            <div class="col-md-4">
-                <h5>Contact Information</h5>
-                <ul class="contact-list">
-                    <li><i class="fa fa-map-marker"></i> 123 Steel Avenue, Suite 456, City, State, 12345</li>
-                    <li><i class="fa fa-phone"></i> (123) 456-7890</li>
-                    <li><i class="fa fa-envelope"></i> <a href="mailto:info@steelentry.com">info@steelentry.com</a></li>
-                </ul>
-            </div>
-
-            <!-- Social Media Section -->
-            <div class="col-md-4">
-                <h5>Follow Us</h5>
-                <div class="social-media">
-                    <a href="https://facebook.com/yourpage" target="_blank" class="social-icon"><i class="fa fa-facebook"></i></a>
-                    <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon"><i class="fa fa-twitter"></i></a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon"><i class="fa fa-linkedin"></i></a>
-                    <a href="https://instagram.com/yourprofile" target="_blank" class="social-icon"><i class="fa fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Copyright Section -->
-        <div class="row">
-            <div class="col-12 text-center">
-                <p>&copy; 2024 Steel Entry. All rights reserved. | Designed by <a href="" target="_blank">Eliseo Rodriguez at Echelon</a></p>
-            </div>
-        </div>
+<footer>
+  <div class="container">
+    <!-- Contact Information Section -->
+    <div class="contact-info">
+      <h3>Contact Us</h3>
+      <div>
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:info@envision.com">info@envision.com</a>
+      </div>
+      <div>
+        <i class="fas fa-phone-alt"></i>
+        <a href="tel:+123456789">+1 (234) 567-89</a>
+      </div>
+      <div>
+        <i class="fas fa-map-marker-alt"></i>
+        <span>1234 Design St, City, State, 56789</span>
+      </div>
     </div>
+
+    <!-- Quick Links Section -->
+    <div class="quick-links" style="text-align: right;">
+      <h3>Quick Links</h3>
+      <div>
+        <a href="#about"><i class="fas fa-info-circle"></i> About Us</a>
+        <a href="#services"><i class="fas fa-cogs"></i> Our Services</a>
+        <a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a>
+        <a href="#contact"><i class="fas fa-phone-alt"></i> Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 Envision. All rights reserved.</p>
+  </div>
 </footer>
 
     <!-- Bootstrap JavaScript and dependencies -->
@@ -485,7 +427,15 @@
         // Initialize AOS
         AOS.init();
     </script>
-    <script>
+    <script>   // Optional: Add a shadow effect to the navbar when scrolling
+        window.addEventListener('scroll', function() {
+            var navbar = document.querySelector('.navbar');
+            if (window.scrollY > 40) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
         // JavaScript to handle dropdown image display
         document.querySelectorAll('.dropdown-item').forEach(item => {
             item.addEventListener('mouseover', function() {
@@ -493,6 +443,14 @@
                 document.getElementById('dropdownImage').src = imageUrl;
             });
         });
+        window.addEventListener('scroll', function() {
+        var navbar = document.querySelector('.navbar');
+        if (window.scrollY > 65) {
+            navbar.classList.add('shrunk');
+        } else {
+            navbar.classList.remove('shrunk');
+        }
+    });
     </script>
 </body>
 </html>

@@ -505,7 +505,259 @@
     color: #000; /* Icon color */
     transition: color 0.3s;
 }
-
-.social-icons a:hover i {
-    color: #007bff; /* Change hover color */
+.second-section {
+    position: relative;
+    background-image: 
+        url('assets/Doorspic.jpg'),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.5) 100%);
+    background-size: cover;
+    background-position: center top;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
+
+.second-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1;
+}
+/* Navbar styling */
+.navbar {
+    z-index: 1050; /* Make sure navbar is above everything */
+  
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent background with a slight shadow */
+}
+
+.navbar .navbar-brand img {
+    height: 40px; /* Adjust logo size */
+}
+
+/* Adjust navbar links */
+.navbar-nav .nav-link {
+    color: #fff !important; /* White text color */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ddd !important; /* Lighter hover effect */
+}
+
+/* Hero Section with Background Image and 50% Black Overlay */
+.hero-section {
+    position: relative;
+    background-image: url('assets/picsaaaa.svg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 550px; /* Adjust height to your preference */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 80px; /* Push down the content to avoid overlap with navbar */
+}
+
+/* Black Overlay with 50% opacity */
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% black opacity overlay */
+    z-index: 1; /* Ensure overlay is above the image but below the text */
+}
+
+/* Text Content */
+.hero-section .container {
+    position: relative;
+    z-index: 2; /* Text should be above the overlay */
+    text-align: center;
+}
+
+/* Styling for Text */
+.hero-section h1 {
+    font-size: 3rem; /* Larger font size */
+}
+
+.hero-section p {
+    font-size: 1.25rem; /* Medium-sized paragraph text */
+}
+.navbar {
+    z-index: 1050; /* Ensure the navbar is always above the hero section */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.116); /* Slight transparent background */
+    transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+}
+/* Shrunk Navbar */
+.navbar.shrunk {
+    padding: 10px 0; /* Reduce padding */
+    background-color: rgba(0, 0, 0, 0.418); /* Darker background when shrunk */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.navbar.shrunk .navbar-brand img {
+    height: 70px; /* Smaller logo when navbar is shrunk */
+}
+
+.navbar .navbar-brand img {
+    height: 100px; /* Default logo size */
+}
+.move-form-down {
+    margin-top: 150px; /* Adjust this value as needed */
+}
+footer {
+    position: relative;
+    background-image: url('assets/Affordable homes in thriving communities.svg'), linear-gradient(rgba(0, 0, 0, 0.959), rgba(0, 0, 0, 0.6)); /* Background image and overlay */
+    background-size: cover; /* Ensures the image covers the entire footer */
+    background-position: center; /* Centers the image */
+    padding: 40px 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+
+  }
+  
+  footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  footer h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  footer .contact-info,
+  footer .quick-links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  footer .contact-info div,
+  footer .quick-links div {
+    margin-bottom: 20px;
+  }
+  
+  footer .contact-info img,
+  footer .quick-links img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  footer .footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  /* Overall container */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  /* Row layout */
+  .row2{
+
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Image container with hover effect */
+  .image-container {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 2px;
+    transition: transform 0.8s ease;
+  }
+  
+  /* Image styling */
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Add to your existing CSS */
+
+/* Image container positioning */
+.image-container {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect: grow image */
+  .image-container:hover {
+    transform: scale(1.1);
+  }
+  
+  .image-container:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Overlay styling */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    color: rgba(255, 255, 255, 0.87);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* Make overlay visible on hover */
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
