@@ -184,7 +184,7 @@
 </head>
 <body>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-black ">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <div class="container">
         <a class="navbar-brand" href="index.html">
             <img src="assets/Envision (1).svg" alt="Envision Logo" class="logo">
@@ -194,14 +194,30 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="residential.html">Residential</a>
+                <li class="nav-item active dropdown">
+                    <a class="nav-link" href="residential.html">Residential <i class="fas fa-chevron-down"></i></a>
+                    <!-- Dropdown for Residential -->
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="ResidentialSteel.html">Steel Products</a></li>
+                        <li><a class="dropdown-item" href="ResidentialIron.html">Iron Products</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="commercial.html">Commercial</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="materials.html">Materials</a>
+                <li class="nav-item active dropdown">
+                    <a class="nav-link" href="materials.html">Materials <i class="fas fa-chevron-down"></i></a>
+                    <!-- Dropdown for Materials -->
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Thermal.html">Thermally Broken</a></li>
+                        <li><a class="dropdown-item" href="hot.html">Hot Rolled Steel</a></li>
+                        <li><a class="dropdown-item" href="cold.html">Cold Rolled Steel</a></li>
+                        <li><a class="dropdown-item" href="stainless.html">Stainless Steel</a></li>
+                        <li><a class="dropdown-item" href="color.html">Color Coated Steel</a></li>
+                        <li><a class="dropdown-item" href="galvanized.html">Steel Entry 500 Galvanized Steel</a></li>
+                        <li><a class="dropdown-item" href="architecturalbronze.html">Architecture Bronze</a></li>
+                        <li><a class="dropdown-item" href="wroughtiron.html">Wrought Iron</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="gallery.html">Our Gallery</a>
@@ -213,7 +229,6 @@
         </div>
     </div>
 </nav>
-
 <!-- Hero Section -->
 <section class="hero-section">
     <div class="overlay"></div> <!-- Black overlay with 50% opacity -->
@@ -223,7 +238,6 @@
     </div>
 </section>
 <!-- Brand Carousel Section -->
-
 <section class="alternating-section">
     <div class="container">
         <!-- First Row: Image on the Right, Text on the Left -->
@@ -237,46 +251,48 @@
             </div>
         </div>
         <!-- Second Row: Image on the Left, Text on the Right -->
-        <div class="row flex-row-reverse" data-aos="fade-up" data-aos-duration="1400">
-            <div class="col-lg-6 text-content">
-                <h2>Trusted Nationwide</h2>
-                <p> We are committed to delivering functional, stylish, and modern interiors that enhance the living experience. Trusted by homeowners nationwide, we take pride in our attention to detail, exceptional quality, and creating homes that inspire. Explore the stunning homes we’ve brought to life across the country!</p>
+       
+    </div>
+</section>
+<!-- Residential Work Section -->
+<section class="residential-work-section py-5" style="background-color: #f8f9fa;font-family: 'Times New Roman', Times, serif;">
+    <div class="container">
+        <div class="header-section text-center mb-4">
+            <h1>Our Residential Work</h1>
+        </div>
+        <div class="gallery">
+            <div class="row2">
+                <!-- Image 1 -->
+                <div class="image-container" data-aos="fade-up" data-aos-duration="1600">
+                    <img src="assets/4abb9374-5279-4d9c-8131-3c327974780c.jpg" alt="615 Brewer Road">
+                    <div class="overlay">615 Brewer Road</div>
+                </div>
+                <!-- Image 2 -->
+                <div class="image-container" data-aos="fade-up" data-aos-duration="1600">
+                    <img src="assets/dela.jpg" alt="1016 Delacroix">
+                    <div class="overlay">1016 Delacroix</div>
+                </div>
+                <!-- Image 3 -->
+                <div class="image-container" data-aos="fade-up" data-aos-duration="1600">
+                    <img src="assets/costa.jpg" alt="2210 Costa Del Sol">
+                    <div class="overlay">2210 Costa Del Sol</div>
+                </div>
             </div>
-            <div class="col-lg-6 image-content">
-                <img src="assets/ff.jpg" alt="Innovative Solutions">
+            <div class="row2">
+                <!-- Image 4 -->
+                <div class="image-container" data-aos="fade-up" data-aos-duration="1600">
+                    <img src="assets/costa2.jpg" alt="2214 Costa Del Sol">
+                    <div class="overlay">2214 Costa Del Sol</div>
+                </div>
+                <!-- Image 5 -->
+                <div class="image-container" data-aos="fade-up" data-aos-duration="1600">
+                    <img src="assets/costa3.jpg" alt="Owings Mills, MD">
+                    <div class="overlay">Owings Mills, MD</div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<div class="header-section" style="text-align: center;">
-    <h1>Our Residential Work</h1>
-  </div>
-<div class="gallery">
-    <div class="row2">
-      <div class="image-container" data-aos="fade-up" data-aos-duration="1600">
-        <img src="assets/4abb9374-5279-4d9c-8131-3c327974780c.jpg" alt="615 Brewer Road">
-        <div class="overlay">615 Brewer Road</div>
-      </div>
-      <div class="image-container" data-aos="fade-up" data-aos-duration="1600">
-        <img src="assets/dela.jpg" alt="1016 Delacroix">
-        <div class="overlay">1016 Delacroix</div>
-      </div>
-      <div class="image-container" data-aos="fade-up" data-aos-duration="1600">
-        <img src="assets/costa.jpg" alt="Home 3">
-        <div class="overlay">2210 Costa Del Sol</div>
-      </div>
-    </div>
-    <div class="row2">
-      <div class="image-container" data-aos="fade-up" data-aos-duration="1600">
-        <img src="assets/costa2.jpg" alt="Home 4">
-        <div class="overlay">2214 Costa Del Sol</div>
-      </div>
-      <div class="image-container" data-aos="fade-up" data-aos-duration="1600">
-        <img src="assets/costa3.jpg" alt="Home 5">
-        <div class="overlay"> Owings Mills, MD</div>
-      </div>
-    </div>
-</div>
 <!-- Footer Section -->
 <footer>
     <div class="container">

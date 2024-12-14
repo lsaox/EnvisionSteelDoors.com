@@ -185,7 +185,7 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black ">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="assets/Envision (1).svg" alt="Envision Logo" class="logo">
@@ -195,14 +195,30 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="residential.html">Residential</a>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link" href="residential.html">Residential <i class="fas fa-chevron-down"></i></a>
+                        <!-- Dropdown for Residential -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="ResidentialSteel.html">Steel Products</a></li>
+                            <li><a class="dropdown-item" href="ResidentialIron.html">Iron Products</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="commercial.html">Commercial</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="materials.html">Materials</a>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link" href="materials.html">Materials <i class="fas fa-chevron-down"></i></a>
+                        <!-- Dropdown for Materials -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Thermal.html">Thermally Broken</a></li>
+                            <li><a class="dropdown-item" href="hot.html">Hot Rolled Steel</a></li>
+                            <li><a class="dropdown-item" href="cold.html">Cold Rolled Steel</a></li>
+                            <li><a class="dropdown-item" href="stainless.html">Stainless Steel</a></li>
+                            <li><a class="dropdown-item" href="color.html">Color Coated Steel</a></li>
+                            <li><a class="dropdown-item" href="galvanized.html">Steel Entry 500 Galvanized Steel</a></li>
+                            <li><a class="dropdown-item" href="architecturalbronze.html">Architecture Bronze</a></li>
+                            <li><a class="dropdown-item" href="wroughtiron.html">Wrought Iron</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="gallery.html">Our Gallery</a>
@@ -214,7 +230,6 @@
             </div>
         </div>
     </nav>
-    
 
 <!-- Hero Section -->
 <section class="hero-section" data-aos-duration="1400">
@@ -348,21 +363,21 @@
             <div class="carousel-inner">
                 <!-- Team Member 1 -->
                 <div class="carousel-item active">
-                    <div class="row justify-content-center gx-5"> <!-- Increased horizontal gutter to gx-5 -->
-                        <div class="col-md-3 text-center">
-                            <img src="assets/meldiana.svg" class="d-block w-90" style="height: 500px; object-fit: cover;" alt="Team Member 1">
-                            <h5 class="mt-3">Mel & Diana Soto</h5>
-                            <p>CEO & Founders</p>
+                    <div class="row justify-content-center gx-4"> <!-- Adjusted horizontal gutter to gx-4 for better spacing -->
+                        <div class="col-md-3 text-center" style="margin-bottom: 20px;"> <!-- Added bottom margin for spacing -->
+                            <img src="assets/mrsoto.jpg" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Team Member 1"> <!-- Consistent height for images -->
+                            <h5 class="mt-3">Mel Soto</h5>
+                            <p>CEO and Founder</p>
                         </div>
                         <!-- Team Member 2 -->
-                        <div class="col-md-3 text-center">
-                            <img src="assets/team2.jpg" class="d-block w-90" style="height: 400px; object-fit: cover;" alt="Team Member 2">
-                            <h5 class="mt-3">Alexander Soto</h5>
-                            <p>National Sales Account Manager</p>
+                        <div class="col-md-3 text-center" style="margin-bottom: 20px;"> <!-- Added bottom margin for spacing -->
+                            <img src="assets/dianasoto.jpg" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Team Member 2"> <!-- Consistent height for images -->
+                            <h5 class="mt-3">Diana Soto</h5>
+                            <p>Director of Operations</p>
                         </div>
                         <!-- Team Member 3 -->
-                        <div class="col-md-3 text-center">
-                            <img src="assets/gregkue.jpg" class="d-block w-90" style="height: 400px; object-fit: cover;" alt="Team Member 3">
+                        <div class="col-md-3 text-center" style="margin-bottom: 20px;"> <!-- Added bottom margin for spacing -->
+                            <img src="assets/gregkue.jpg" class="d-block w-100" style="height: 400px; object-fit: cover;" alt="Team Member 3"> <!-- Consistent height for images -->
                             <h5 class="mt-3">Greg Kuebler</h5>
                             <p>Director of Construction & Development</p>
                         </div>
