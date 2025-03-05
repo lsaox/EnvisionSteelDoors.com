@@ -1,0 +1,6 @@
+version: 1
+applications:
+  - name: EnvisionSteeldoors
+    web:
+      document_root: website
+      php_version: 8.0
