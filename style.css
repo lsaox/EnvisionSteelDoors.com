@@ -853,3 +853,64 @@ footer {
 .navbar-nav .nav-item:hover .fa-chevron-down {
     color: #007bff;
 }
+/* Materials Section */
+/* Materials Section */
+.materials-section {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.materials-section h2 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    margin-bottom: 20px; /* Space between header and list */
+}
+
+.materials-section .header-line {
+    width: 60px;
+    margin: 20px auto;
+    border: 2px solid #000;
+}
+
+.material-links {
+    display: flex;
+    justify-content: center;
+}
+
+.material-links ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.material-links ul li {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.material-links ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+    font-family: 'Oswald', sans-serif;
+}
+
+.material-links ul li a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .materials-section h2 {
+        font-size: 2rem;
+    }
+
+    .material-links ul li {
+        font-size: 1rem;
+    }
+}
